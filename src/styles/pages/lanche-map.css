@@ -1,0 +1,60 @@
+/* Adicione ao seu arquivo CSS */
+#page-map {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.img2 {
+  width: 80%;
+  margin-bottom: 70px; 
+}
+
+#page-map aside {
+  width: 440px;
+  background: linear-gradient(329.54deg, #e2b00c 0%, #ffd666 100%);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#page-map aside h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 42px;
+}
+
+#page-map aside p {
+  line-height: 28px;
+  margin-top: 24px;
+}
+
+#page-map aside footer {
+  display: flex;
+  flex-direction: column;
+  line-height: 24px;
+}
+
+#page-map aside footer strong {
+  font-weight: 800;
+}
+
+#page-map .create-lanche {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 64px;
+  height: 64px;
+  background: #d42b27;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-map .create-lanche:hover {
+  background: #f14c4c;
+  transition: 0.2s;
+}
