@@ -52,9 +52,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
+  border: 0;
+  cursor: pointer;
 }
 
 #page-map .create-lanche:hover {
   background: #f14c4c;
   transition: 0.2s;
+}
+
+#page-map .map-popup .leaflet-popup-content-wrapper  {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+#page-map .map-popup .leaflet-popup-content {
+  color: #d42b27;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 8px 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-map .map-popup .leaflet-popup-content a {
+  width: 40px;
+  height: 40px;
+  background: #d42b27;
+  border-radius: 12px;
+  box-shadow: 17.2868px 27.6589px 41.4883px rgba(212, 43, 39, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-map .map-popup .leaflet-popup-tip-container {
+  display: none;
 }
