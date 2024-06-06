@@ -21,7 +21,7 @@
   background: url('../../images/finder.png') no-repeat 80% center;
 }
 
-#page-landing .content-wrapper main  {
+#page-landing .content-wrapper main {
   max-width: 380px;
 }
 
@@ -41,6 +41,7 @@
   width: 20%;
   margin-top: -60px;
 }
+
 .content-wrapper .location {
   position: absolute;
   right: 0;
@@ -73,4 +74,112 @@
 .content-wrapper .enter-app:hover {
   background: #f14c4c;
   transition: 0.2s;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  #page-landing .content-wrapper {
+    max-width: 1000px;
+    max-height: 700px;
+    padding: 40px;
+  }
+
+  #page-landing .content-wrapper main h1 {
+    font-size: 64px;
+    line-height: 60px;
+  }
+
+  #page-landing .content-wrapper main p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  #page-landing .content-wrapper {
+    max-width: 800px;
+    max-height: 600px;
+    padding: 32px;
+  }
+
+  #page-landing .content-wrapper main h1 {
+    font-size: 56px;
+    line-height: 50px;
+  }
+
+  #page-landing .content-wrapper main p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  #page-landing .content-wrapper {
+    max-width: 600px;
+    max-height: 500px;
+    padding: 24px;
+  }
+
+  #page-landing .content-wrapper main {
+    max-width: 100%;
+  }
+
+  #page-landing .content-wrapper main h1 {
+    font-size: 48px;
+    line-height: 44px;
+  }
+
+  #page-landing .content-wrapper main p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .img1 {
+    width: 30%;
+  }
+
+  .content-wrapper .location {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  #page-landing {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  #page-landing .content-wrapper {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 16px;
+    background: url('../../images/finder.png') no-repeat center center / cover;
+  }
+
+  #page-landing .content-wrapper main h1 {
+    font-size: 40px;
+    line-height: 36px;
+  }
+
+  #page-landing .content-wrapper main p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .img1 {
+    width: 40%;
+    margin-top: -40px;
+  }
+
+  .content-wrapper .location {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 20px;
+  }
+
+  .content-wrapper .enter-app {
+    width: 60px;
+    height: 60px;
+  }
 }
