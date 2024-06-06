@@ -2,41 +2,7 @@
   display: flex;
 }
 
-#page-create-orphanage aside {
-  height: 100%;
-  position: fixed;
-  padding: 32px 24px;
-  background: linear-gradient(329.54deg, #d61515 0%, #d61515 100%);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#page-create-orphanage aside footer a,
-#page-create-orphanage aside footer button {
-  width: 48px;
-  height: 48px;
-
-  border: 0;
-
-  background: #cb1212;
-  border-radius: 16px;
-
-  cursor: pointer;
-
-  transition: background-color 0.2s;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#page-create-orphanage aside footer a:hover,
-#page-create-orphanage aside footer button:hover {
-  background: #eb1717;
-}
 
 #page-create-orphanage main {
   flex: 1;

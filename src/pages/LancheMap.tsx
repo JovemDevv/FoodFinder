@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiPlus } from 'react-icons/fi';
 import logoImg from '../images/FoodFinder.png';
 import '../styles/pages/lanche-map.css';
-import {  MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import Leaflet from 'leaflet';
-import mapMarkerImg from '../images/FoodFinder-icon.png';
+import {  Map, Marker, Popup, TileLayer } from 'react-leaflet';
+
+import finderMapIcon from '../utils/mapIcon';
+import api from '../services/api';
+
 
 const position: [number, number] = [-12.9718, -38.5011]
 
-const mapIcon = Leaflet.icon({
-  iconUrl: mapMarkerImg,
-  iconSize: [100, 110],
-  iconAnchor: [50, 110],
-  popupAnchor: [170, 2]
-})
-
 function LancheMap() {
+  
+
+  useEffect(() => {
+    api.get('finder').then(response => {
+      const finders = response.data
+    })
+  }, [])
+
   return (
     <div id='page-map'>
       <aside>
@@ -34,12 +36,12 @@ function LancheMap() {
         </footer>
       </aside>
 
-      <MapContainer center={position} zoom={15} style={{ height: "100%", width: "100%" }}>
+    <Map center={position} zoom={15} style={{ height: "100%", width: "100%" }}>
     <TileLayer
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
     <Marker 
-      icon={mapIcon} 
+      icon={finderMapIcon} 
       position={position}>
     <Popup closeButton={false} minWidth={240} maxWidth={240 } className='map-popup'>
 
@@ -50,7 +52,7 @@ function LancheMap() {
     </Popup>
 
     </Marker>
-  </MapContainer>
+  </Map>
   
       <Link to='/finder/create' className='create-lanche'>
         <FiPlus size={32} color='#FFF' />

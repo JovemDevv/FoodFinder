@@ -1,48 +1,40 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
-import { Marker, TileLayer, MapContainer } from "react-leaflet";
-import L from 'leaflet';
-
-import mapMarkerImg from '../images/FoodFinder-icon.png';
-
+import { Marker, Map } from "react-leaflet";
 import '../styles/pages/finder.css';
-
-const finderMapIcon = L.icon({
-  iconUrl: mapMarkerImg,
-
-  iconSize: [58, 68],
-  iconAnchor: [29, 68],
-  popupAnchor: [0, -60]
-})
+import Sidebar from "../components/Sidebar";
+import Food from '../images/chad-montano-MqT0asuoIcU-unsplash.jpg'
+import finderMapIcon from "../utils/mapIcon";
 
 export default function Orphanage() {
   return (
     <div id="page-orphanage">
-      <aside />
+
+      <Sidebar />
 
       <main>
         <div className="orphanage-details">
-          <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+          <img src={Food} alt="Lar das meninas" />
 
           <div className="images">
             <button className="active" type="button">
-              <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+              <img src={Food} alt="Lar das meninas" />
             </button>
             <button type="button">
-              <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+              <img src={Food} alt="Lar das meninas" />
             </button>
             <button type="button">
-              <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+              <img src={Food} alt="Lar das meninas" />
             </button>
             <button type="button">
-              <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+              <img src={Food} alt="Lar das meninas" />
             </button>
             <button type="button">
-              <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+              <img src={Food} alt="Lar das meninas" />
             </button>
             <button type="button">
-              <img src="https://www.gcd.com.br/wp-content/uploads/2020/08/safe_image.jpg" alt="Lar das meninas" />
+              <img src={Food} alt="Lar das meninas" />
             </button>
           </div>
           
@@ -51,14 +43,14 @@ export default function Orphanage() {
             <p>Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.</p>
 
             <div className="map-container">
-              <MapContainer  
+              <Map  
                 
                 center={[-27.2092052,-49.6401092]} 
                 zoom={16} 
                 style={{ width: '100%', height: 280 }}
               >
                 <Marker interactive={false} icon={finderMapIcon} position={[-27.2092052,-49.6401092]} />
-              </MapContainer>
+              </Map>
 
               <footer>
                 <a href="">Ver rotas no Google Maps</a>
