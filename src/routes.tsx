@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './pages/Landing';
 import LancheMap from './pages/LancheMap';
 import Finder from './pages/Finder';
@@ -8,12 +8,12 @@ import CreateFinder from './pages/Create-finder';
 function AppRoutes() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/app" element={<LancheMap />} />
-        <Route path="/finder/create" element={<CreateFinder />} />
-        <Route path="/finder/:id" element={<Finder />} />
-      </Routes>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path="/app" component={LancheMap} />
+        <Route path="/finder/create" component={CreateFinder} />
+        <Route path="/finder/:id" component={Finder} />
+      </Switch>
     </BrowserRouter>
   );
 }

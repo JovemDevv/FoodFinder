@@ -1,34 +1,28 @@
 import React from "react";
-import { MapContainer, Marker } from 'react-leaflet';
+import { Map, MapEvented, Marker } from 'react-leaflet';
 import '../styles/pages/create-finder.css';
-import mapMarkerImg from '../images/FoodFinder-icon.png'
-import L from "leaflet";
 import { FiPlus } from "react-icons/fi";
+import Sidebar from "../components/Sidebar";
+import finderMapIcon from "../utils/mapIcon";
 
-const mapIcon = L.icon({
-  iconUrl: mapMarkerImg,
-  iconSize: [100, 110],
-  iconAnchor: [50, 110],
-  popupAnchor: [170, 2]
-})
-
-
+const position: [number, number] = [-12.9718, -38.5011]
 
 
 
 export default function OrphanagesMap() {
   return (
     <div id="page-create-orphanage">
-      
+      <Sidebar />
 
       <main>
         <form className="create-orphanage-form">
           <fieldset>
             <legend>Dados</legend>
 
-            <MapContainer style={{ width: '100%', height: 280 }}>
-              <Marker interactive={false} icon={mapIcon} position={[-27.2092052,-49.6401092]} />
-            </MapContainer>
+            <Map style={{ width: '100%', height: '100%' }}>
+              
+              <Marker interactive={false} icon={finderMapIcon} position={position} />
+            </Map>
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
