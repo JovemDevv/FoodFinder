@@ -213,17 +213,15 @@ form.create-orphanage-form .input-block .button-select button:last-child {
 
 @media (max-width: 576px) {
   form.create-orphanage-form {
-    width: 100%;
-    padding: 16px;
+    width: 90%;
+    padding: 50px;
   }
   
   form.create-orphanage-form fieldset legend {
     font-size: 18px;
   }
 
-  .sidebar {
-    display: none;
-  }
+ 
   
   form.create-orphanage-form .input-block .images-container {
     grid-template-columns: repeat(2, 1fr);
