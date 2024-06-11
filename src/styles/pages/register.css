@@ -1,0 +1,91 @@
+.register-container {
+  background: linear-gradient(329.54deg, #d6b315 0%, #f3c741 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 30px;
+  width: 100%;
+}
+
+.icon-container {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.icon {
+  position: absolute;
+  left: 35px; /* Ajuste conforme necessário */
+  transform: translateY(-50%);
+  width: 80%; /* Ajuste conforme necessário */
+  height: auto;
+}
+
+.mb-3 {
+  padding: 10px 0 10px 0;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  
+}
+
+.btn-primary {
+  background-color: #ffee00;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #f5ed7a;
+}
+
+
+.alert {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    padding: 0 15px;
+  }
+
+  .card {
+    margin: 0;
+  }
+}
