@@ -8,7 +8,6 @@ import finderMapIcon from "../utils/mapIcon";
 import api from "../services/api";
 import { useParams } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
-import { LeafletMouseEvent } from "leaflet";
 
 interface Finder {
   latitude: number;
